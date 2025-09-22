@@ -240,7 +240,8 @@ export default function Home() {
                 />
               </div>
               {/* Search Modal */}
-              <div className="invisible opacity-0 top-20  absolute right-0 shadow flex w-[336px] flex-col justify-end overflow-x-hidden rounded-xl bg-white dark:bg-[#374151] p-4 space-y-4 transition-all ease-in-out duration-300 ">
+              {/*visible opacity-100 برای نمایش این قسمت  */}
+              <div className="visible opacity-0 top-20  absolute right-0 shadow flex w-[336px] flex-col justify-end overflow-x-hidden rounded-xl bg-white dark:bg-[#374151] p-4 space-y-4 transition-all ease-in-out duration-300 ">
                 {/* Result */}
                 <div>
                   <span className="flex items-center text-sm gap-x-1 text-gray-600 dark:text-gray-200">
@@ -555,6 +556,7 @@ export default function Home() {
                 </span>
               </button>
               {/* Cart */}
+              {/* -translate-x-[0px]برای نمایش این قسمت */}
               <div className="transition-transform ease-in-out duration-700 fixed top-0 bottom-0 left-0 -translate-x-[360px] z-50 w-[360px] p-4  bg-white dark:bg-[#1f2937]">
                 {/* Header */}
                 <div className="flex items-center justify-between pb-2 border-b-2 border-gray-200 dark:border-gray-600 text-gray-800 dark:text-gray-300 ">
@@ -1185,6 +1187,7 @@ export default function Home() {
 
                 <p>آدرس خود را انتخاب کنید</p>
               </button>
+              {/* مودال سرچ شهر ها */}
               <div className="invisible opacity-0 top-20 absolute right-0 z-50  w-56 rounded-lg bg-white p-3 border border-[#00000017] text-[#1f2937] shadow transition-all ease-in-out duration-300 delay-75 dark:bg-[#1f2937] dark:text-[#e5e7eb]">
                 {/* Search box */}
                 <button className="flex bg-gray-200 dark:bg-gray-700 gap-x-1 w-full items-center p-2 rounded-lg">
