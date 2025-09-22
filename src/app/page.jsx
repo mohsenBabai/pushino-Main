@@ -240,8 +240,8 @@ export default function Home() {
                 />
               </div>
               {/* Search Modal */}
-              {/*visible opacity-100 برای نمایش این قسمت  */}
-              <div className="visible opacity-0 top-20  absolute right-0 shadow flex w-[336px] flex-col justify-end overflow-x-hidden rounded-xl bg-white dark:bg-[#374151] p-4 space-y-4 transition-all ease-in-out duration-300 ">
+              {/*visible opacity-100 flex برای نمایش این قسمت  */}
+              <div className=" invisible opacity-0 hidden top-20  absolute right-0 shadow  w-[336px] flex-col justify-end overflow-x-hidden rounded-xl bg-white dark:bg-[#374151] p-4 space-y-4 transition-all ease-in-out duration-300 ">
                 {/* Result */}
                 <div>
                   <span className="flex items-center text-sm gap-x-1 text-gray-600 dark:text-gray-200">
@@ -668,7 +668,7 @@ export default function Home() {
             </div>
           </div>
           {/* mobile search input */}
-          <div className=" flex md:hidden gap-x-2 border z-0  w-full border-[#dbd5d1] dark:border-[#374155]  bg-gray-50 dark:bg-gray-700  p-1 rounded-full cursor-pointer ring-blue-400  transition-all ">
+          <div className=" flex md:hidden invisible opacity-0 gap-x-2 border z-0  w-full border-[#dbd5d1] dark:border-[#374155]  bg-gray-50 dark:bg-gray-700  p-1 rounded-full cursor-pointer ring-blue-400  transition-all ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -691,7 +691,7 @@ export default function Home() {
             />
           </div>
           {/* Mobile search box */}
-          <div className="relative z-20 hidden">
+          <div className="relative z-20 hidden ">
             {/* INPUT */}
             <div className=" flex gap-x-2 border  w-full border-[#dbd5d1] dark:border-[#374155]  bg-gray-50 dark:bg-gray-700  p-1 rounded-full cursor-pointer ring-blue-400  transition-all z-40">
               <svg
