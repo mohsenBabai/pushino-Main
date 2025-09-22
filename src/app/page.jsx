@@ -33,7 +33,8 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              {/* menu */}
+              {/* menu  */}
+              {/*را اضافه بکنیم translate-x-0 برای نمایش این منو باید کلس */}
               <div className=" z-50 flex flex-col fixed inset-0 h-dvh w-72 overflow-hidden translate-x-72 shadow transition-transform duration-300 p-4 bg-white">
                 {/* MENU MOBILE header  */}
                 <div className="flex w-full items-center justify-between border-b-normal pb-4">
@@ -64,8 +65,8 @@ export default function Home() {
                 </div>
                 {/* MENU MOBILE CATEGORY & ACTION   */}
                 <ul className="flex flex-col gap-y-2 text-gray-800 dark:text-gray-100 mt-4">
-                  <li>
-                    <span className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500">
+                  <li className=" group justify-between cursor-pointer flex items-start rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500 p-2">
+                    <span className=" flex items-center gap-x-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -83,36 +84,110 @@ export default function Home() {
 
                       <a href="/">دسته بندی</a>
                     </span>
-                  </li>
-                  <li className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500">
-                    <svg className="size-5">
-                      <use href="#user"></use>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="size-4 group-hover:-rotate-90 transition-transform ease-in-out duration-200 m-1"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15.75 19.5 8.25 12l7.5-7.5"
+                      />
                     </svg>
-                    <a href="dashboard.html">حساب کاربری</a>
                   </li>
-                  <li className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500">
-                    <svg className="size-5">
-                      <use href="#heart"></use>
+                  <li className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500 p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="size-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                      />
                     </svg>
-                    <a href="dashboard-favorite.html">علاقه مندی ها</a>
+
+                    <a href="/">حساب کاربری</a>
                   </li>
-                  <li className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500">
-                    <svg className="size-5">
-                      <use href="#shopping-cart"></use>
+                  <li className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500 p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="size-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                      />
                     </svg>
-                    <a href="shopping-cart.html">سبد خرید</a>
+
+                    <a href="/">علاقه مندی ها</a>
                   </li>
-                  <li className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500">
-                    <svg className="size-5">
-                      <use href="#check-badge"></use>
+                  <li className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500 p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="size-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                      />
                     </svg>
-                    <a href="#">دربـاره مـا</a>
+
+                    <a href="/">سبد خرید</a>
                   </li>
-                  <li className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500">
-                    <svg className="size-5">
-                      <use href="#phone"></use>
+                  <li className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500 p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="size-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+                      />
                     </svg>
-                    <a href="contact-us.html">تـماس بـا مـا</a>
+
+                    <a href="/">دربـاره مـا</a>
+                  </li>
+                  <li className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500 p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="size-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                      />
+                    </svg>
+
+                    <a href="/">تـماس بـا مـا</a>
                   </li>
                 </ul>
               </div>
@@ -1237,6 +1312,7 @@ export default function Home() {
           </div>
         </div>
       </header>
+
       <main>
         {/* main Banner */}
         <div className="px-4 xl:px-10  group w-full mt-4 lg:mt-10">
