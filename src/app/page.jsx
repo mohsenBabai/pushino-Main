@@ -35,7 +35,7 @@ export default function Home() {
               </div>
               {/* menu  */}
               {/*را اضافه بکنیم translate-x-0 برای نمایش این منو باید کلس */}
-              <div className=" z-50 flex flex-col fixed inset-0 h-dvh w-72 overflow-hidden translate-x-72 shadow transition-transform duration-300 p-4 bg-white">
+              <div className=" z-50 flex flex-col fixed inset-0 h-dvh w-72 overflow-hidden translate-x-0 shadow transition-transform duration-300 p-4 bg-white">
                 {/* MENU MOBILE header  */}
                 <div className="flex w-full items-center justify-between border-b-normal pb-4">
                   <a href="/">
@@ -65,39 +65,61 @@ export default function Home() {
                 </div>
                 {/* MENU MOBILE CATEGORY & ACTION   */}
                 <ul className="flex flex-col gap-y-2 text-gray-800 dark:text-gray-100 mt-4">
-                  <li className=" group justify-between cursor-pointer flex items-start rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500 p-2">
-                    <span className=" flex items-center gap-x-1">
+                  <li className=" group  cursor-pointer rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500 p-2">
+                    <div className="flex items-start  gap-x-1">
+                      <span className=" flex items-center gap-x-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="size-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
+                          />
+                        </svg>
+
+                        <a href="/">دسته بندی</a>
+                      </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="size-5"
+                        className="size-4 group-hover:-rotate-90 transition-transform ease-in-out duration-200 m-1"
                       >
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
+                          d="M15.75 19.5 8.25 12l7.5-7.5"
                         />
                       </svg>
-
-                      <a href="/">دسته بندی</a>
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="size-4 group-hover:-rotate-90 transition-transform ease-in-out duration-200 m-1"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15.75 19.5 8.25 12l7.5-7.5"
-                      />
-                    </svg>
+                    </div>
+                    <div class="bg-white text-black hidden mt-1 group-hover:flex flex-col p-2 top-5 w-full rounded-lg shadow transition-all duration-200 ease-in-out">
+                      <a
+                        class="hover:bg-blue-500 hover:text-gray-50 px-2 py-1 rounded-md mb-1 "
+                        href="/"
+                      >
+                        شال
+                      </a>
+                      <a
+                        class="hover:bg-blue-500 hover:text-gray-50 px-2 py-1 rounded-md mb-1 "
+                        href="/"
+                      >
+                        روسری
+                      </a>
+                      <a
+                        class="hover:bg-blue-500 hover:text-gray-50 px-2 py-1 rounded-md mb-1 "
+                        href="/"
+                      >
+                        مینی اسکارف
+                      </a>
+                    </div>
                   </li>
                   <li className=" cursor-pointer flex items-start gap-x-1 rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500 p-2">
                     <svg
