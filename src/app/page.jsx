@@ -66,7 +66,7 @@ export default function Home() {
                 {/* MENU MOBILE CATEGORY & ACTION   */}
                 <ul className="flex flex-col gap-y-2 text-gray-800 dark:text-gray-100 mt-4">
                   <li className=" group  cursor-pointer rounded-lg transition-all duration-150 ease-in-out hover:text-white hover:bg-blue-500 p-2">
-                    <div className="flex items-start  gap-x-1">
+                    <div className="flex items-start justify-between  gap-x-1">
                       <span className=" flex items-center gap-x-1">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
