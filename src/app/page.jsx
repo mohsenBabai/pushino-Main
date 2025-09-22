@@ -3167,7 +3167,7 @@ export default function Home() {
           </span>{" "}
         </section>
         {/* bottom-navbar */}
-        {/*  رت تعمال بکنیمtranslate-y-[0حط]برای نمایش این قسمت باید */}
+        {/*  رت تعمال بکنیمtranslate-y-[0px]برای نمایش این قسمت باید */}
         <ul className=" fixed bottom-0 left-0 right-0 z-20 h-16 flex  items-center justify-around mx-4 rounded-t-sm translate-y-[100%] transition-transform duration-500 ease-in-out shadow bg-white">
           <li className="dark:text-sky-400 text-blue-500 font-Dana-Medium flex flex-col items-center leading-5 text-sm gap-1 cursor-pointer">
             <svg
