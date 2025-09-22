@@ -35,7 +35,7 @@ export default function Home() {
               </div>
               {/* menu  */}
               {/*را اضافه بکنیم translate-x-0 برای نمایش این منو باید کلس */}
-              <div className=" z-50 flex flex-col fixed inset-0 h-dvh w-72 overflow-hidden translate-x-0 shadow transition-transform duration-300 p-4 bg-white">
+              <div className=" z-50 flex flex-col fixed inset-0 h-dvh w-72 overflow-hidden translate-x-72 shadow transition-transform duration-300 p-4 bg-white">
                 {/* MENU MOBILE header  */}
                 <div className="flex w-full items-center justify-between border-b-normal pb-4">
                   <a href="/">
