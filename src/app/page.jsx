@@ -100,21 +100,21 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <div class="bg-white text-black hidden mt-1 group-hover:flex flex-col p-2 top-5 w-full rounded-lg shadow transition-all duration-200 ease-in-out">
+                    <div className="bg-white text-black hidden mt-1 group-hover:flex flex-col p-2 top-5 w-full rounded-lg shadow transition-all duration-200 ease-in-out">
                       <a
-                        class="hover:bg-blue-500 hover:text-gray-50 px-2 py-1 rounded-md mb-1 "
+                        className="hover:bg-blue-500 hover:text-gray-50 px-2 py-1 rounded-md mb-1 "
                         href="/"
                       >
                         شال
                       </a>
                       <a
-                        class="hover:bg-blue-500 hover:text-gray-50 px-2 py-1 rounded-md mb-1 "
+                        className="hover:bg-blue-500 hover:text-gray-50 px-2 py-1 rounded-md mb-1 "
                         href="/"
                       >
                         روسری
                       </a>
                       <a
-                        class="hover:bg-blue-500 hover:text-gray-50 px-2 py-1 rounded-md mb-1 "
+                        className="hover:bg-blue-500 hover:text-gray-50 px-2 py-1 rounded-md mb-1 "
                         href="/"
                       >
                         مینی اسکارف
@@ -558,7 +558,7 @@ export default function Home() {
               <div className="transition-transform ease-in-out duration-700 fixed top-0 bottom-0 left-0 -translate-x-[360px] z-50 w-[360px] p-4  bg-white dark:bg-[#1f2937]">
                 {/* Header */}
                 <div className="flex items-center justify-between pb-2 border-b-2 border-gray-200 dark:border-gray-600 text-gray-800 dark:text-gray-300 ">
-                  <h2 className="font-DanaMedium text-lg">
+                  <h2 className="font-Dana-Medium text-lg">
                     سبد خرید
                     <span className="text-sm text-gray-400 font-Dana">
                       (2 مورد)
@@ -636,7 +636,7 @@ export default function Home() {
                             />
                           </svg>
                         </button>
-                        <p className="text-lg text-blue-500 dark:text-blue-400 font-DanaMedium">
+                        <p className="text-lg text-blue-500 dark:text-blue-400 font-Dana-Medium">
                           1,333,000
                           <span className=" text-sm">تومان</span>
                         </p>
@@ -650,7 +650,7 @@ export default function Home() {
                     <p className="text-gray-500 dark:text-gray-300 text-sm">
                       مبلغ قابل پرداخت :
                     </p>
-                    <p className="text-lg text-blue-500 dark:text-blue-400 font-DanaMedium">
+                    <p className="text-lg text-blue-500 dark:text-blue-400 font-Dana-Medium">
                       1,333,000
                       <span className=" text-sm">تومان</span>
                     </p>
@@ -1399,7 +1399,6 @@ export default function Home() {
             </SwiperSlide>
           </Swiper>
         </div>
-
         {/* Category  */}
         <section className="px-4 xl:px-10 mt-20 font-Dana">
           {/* section Title */}
@@ -1452,7 +1451,6 @@ export default function Home() {
             </Link>
           </div>
         </section>
-
         {/* Amazing products Slider */}
         <section className="px-4 xl:px-10 mt-20 font-Dana">
           <div className="w-full h-80 rounded-xl bg-blue-500 dark:bg-blue-700 p-4 relative flex ">
@@ -1874,7 +1872,6 @@ export default function Home() {
             </Swiper>
           </div>
         </section>
-
         {/*latest Products slider */}
         <section className="px-4 xl:px-10 mt-20 font-Dana">
           {/* section Title */}
@@ -2273,7 +2270,6 @@ export default function Home() {
             </SwiperSlide>
           </Swiper>
         </section>
-
         {/* Banner  */}
         <section className="px-4 xl:px-10 font-Dana   mt-10 lg:mt-20 flex flex-col lg:flex-row items-center gap-5">
           <Link className=" rounded-xl overflow-hidden group" href={"/"}>
@@ -2291,7 +2287,6 @@ export default function Home() {
             />
           </Link>
         </section>
-
         {/* best Products Slider */}
         <section className="px-4 xl:px-10 mt-20 font-Dana">
           {/* section Title */}
@@ -2690,7 +2685,6 @@ export default function Home() {
             </SwiperSlide>
           </Swiper>
         </section>
-
         {/* HottestProducts  */}
         <section className="mx-4 xl:mx-10 mt-20 font-Dana">
           <div className="bg-white dark:bg-gray-800 shadow rounded-xl h-[420px] p-5 flex flex-col gap-y-3 relative overflow-hidden">
@@ -3072,7 +3066,7 @@ export default function Home() {
                   <div className="absolute opacity-0 left-0 top-0 bottom-0 right-0 bg-black/60 flex items-center justify-center group-hover:opacity-100 duration-300 transition-opacity rounded-bl-3xl rounded-tr-3xl">
                     <Link
                       href={"/"}
-                      className="flex items-center px-2 py-1 gap-x-1 font-DanaMedium rounded-lg border-2 border-white text-white"
+                      className="flex items-center px-2 py-1 gap-x-1 font-Dana-Medium rounded-lg border-2 border-white text-white"
                     >
                       <p>ادامه مطالب</p>
                       <svg
@@ -3172,6 +3166,82 @@ export default function Home() {
             </p>
           </span>{" "}
         </section>
+        {/* bottom-navbar */}
+        {/*  رت تعمال بکنیمtranslate-y-[0حط]برای نمایش این قسمت باید */}
+        <ul className=" fixed bottom-0 left-0 right-0 z-20 h-16 flex  items-center justify-around mx-4 rounded-t-sm translate-y-[100%] transition-transform duration-500 ease-in-out shadow bg-white">
+          <li className="dark:text-sky-400 text-blue-500 font-Dana-Medium flex flex-col items-center leading-5 text-sm gap-1 cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+              />
+            </svg>
+
+            <a href="/">خانه</a>
+          </li>
+          <li className=" flex flex-col items-center leading-5 text-sm gap-1 cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
+              />
+            </svg>
+
+            <a href="/">فروشگاه</a>
+          </li>
+          <li className=" flex flex-col items-center leading-5 text-sm gap-1 cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+              />
+            </svg>
+
+            <a href="/">سبد خرید</a>
+          </li>
+          <li className=" flex flex-col items-center leading-5 text-sm gap-1 cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+              />
+            </svg>
+
+            <a href="/">حساب من</a>
+          </li>
+        </ul>
       </main>
 
       <footer>
