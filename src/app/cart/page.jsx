@@ -165,6 +165,9 @@ export default function ShoppingCart() {
         </div>
         {/* price box */}
         <div className="w-full mb-14 lg:w-1/4 lg:sticky top-5 flex flex-col gap-y-4 rounded-lg bg-white dark:bg-gray-800 shadow p-4 ">
+          <div className="flex items-center justify-center border-b border-gray-300">
+            <h4>خلاصه صورت حساب</h4>
+          </div>
           <ul className=" space-y-8">
             <li className="flex items-center justify-between">
               <p className="">قیمت کالاها(۱)</p>
