@@ -6,7 +6,6 @@ export default function ShoppingCart() {
   const handler = () => {};
   return (
     <>
-      {/* هدر */}
       <section className="flex flex-col  lg:flex-row justify-between items-start gap-4 mx-4 xl:mx-10 mt-5">
         {/* cart */}
         <div className="w-full lg:w-3/4 flex flex-col gap-y-8 rounded-lg bg-white dark:bg-gray-800 shadow p-4 ">
@@ -410,8 +409,6 @@ export default function ShoppingCart() {
           </li>
         </ul>
       </section>
-
-      {/* فوتر */}
     </>
   );
 }
