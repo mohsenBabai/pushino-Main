@@ -8,6 +8,7 @@
   --font-Morabba-Bold: "Morabba Bold";
   --font-Morabba-Light: "Morabba Light";
   --font-Morabba-Medium: "Morabba Medium";
+  --breakpoint-xs: 380px;
 }
 
 @font-face {
