@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -46,130 +47,15 @@ export default function ShoppingCart() {
               <div className=" p-2 lg:p-4  relative">
                 <div className="flex flex-col sm:flex-row gap-2  justify-between items-center  sm:items-center">
                   {/* img */}
-                  <div className="flex items-center gap-2">
-                    <img
-                      src="/images/category/cat2.png"
-                      alt="product img"
-                      className="w-36"
-                    />
-                  </div>
-                  {/* product infos */}
-                  <div className="flex flex-col gap-y-5 items-start">
-                    <h2 className="font-Dana-Medium line-clamp-1">شال</h2>
-                    <ul className="space-y-3  text-gray-400 ">
-                      <li className="text-sm flex items-center gap-x-1.5">
-                        <p>رنگ :</p>
-                        <p className="mt-1"> آبی</p>
-                      </li>
-                      <li className="text-sm flex items-center gap-x-1.5">
-                        <p>سایز :</p>
 
-                        <p className="mt-1"> 120 </p>
-                      </li>
-                      <li className="text-sm flex items-center gap-x-1.5">
-                        <p className="mt-1"> تضمین بازگشت کالا</p>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* count btn  */}
-                  <button className="flex items-center justify-between gap-x-1 rounded-lg border border-gray-200 dark:border-white/20 py-1 px-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-4 h-4 increment text-green-600 cursor-pointer"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 4.5v15m7.5-7.5h-15"
-                      />
-                    </svg>
-
-                    <input
-                      type="text"
-                      className=" mr-8 text-lg bg-transparent outline-none max-w-11 "
-                      name="custom-input"
-                      value={2}
-                      onChange={handler}
-                      id="custom-input"
-                      min={1}
-                      max={2}
-                    />
-
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-4 h-4 decrement text-red-500 cursor-pointer"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 12h14"
-                      />
-                    </svg>
-                  </button>
-                  {/* off */}
-                  <div className="flex flex-col items-center gap-x-1 text-gray-700 dark:text-gray-300 font-Dana-Medium mt-5">
-                    {/* اگر محصول تخفیف داشت  اینجا نمایش داده میشود */}
-                    <span className="flex items-center justify-center text-red-600 text-[11px] pb-0.5">
-                      500,000 تومان تخفیف
-                    </span>
-                    <span className="flex items-center">
-                      <p className="  pl-1">4,500,000</p>
-                      <p className="">تومان</p>
-                    </span>
-                  </div>
-                  {/* trash in pc */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-5 h-5 hidden sm:flex text-red-600 cursor-pointer"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
-                    />
-                  </svg>
-                  {/* trash in mobile */}
-                </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-5 h-5 absolute top-3 left-3 sm:hidden text-red-600 cursor-pointer"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+                  <Image
+                    width={200}
+                    height={200}
+                    src="/images/category/cat2.png"
+                    alt="product img"
+                    className="w-36"
                   />
-                </svg>
-              </div>
-            </div>{" "}
-            {/* 2 */}
-            <div className="  w-full flex flex-col gap-y-4 border-2 border-gray-200 dark:border-white/20 rounded-xl ">
-              <div className=" p-2 lg:p-4  relative">
-                <div className="flex flex-col sm:flex-row gap-2  justify-between items-center  sm:items-center">
-                  {/* img */}
-                  <div className="flex items-center gap-2">
-                    <img
-                      src="/images/category/cat2.png"
-                      alt="product img"
-                      className="w-36"
-                    />
-                  </div>
+
                   {/* product infos */}
                   <div className="flex flex-col gap-y-5 items-start">
                     <h2 className="font-Dana-Medium line-clamp-1">شال</h2>
