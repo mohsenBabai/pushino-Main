@@ -212,3 +212,31 @@ input[type="number"] {
 .swiper-button-next {
   @apply flex! items-center! justify-center! text-black! hover:text-blue-500!  h-10! w-10! after:text-[20px]! shadow! bg-white! cursor-pointer! rounded-xl! transition-all! ease-in-out! duration-300! absolute;
 }
+.user-menu {
+  visibility: hidden;
+  position: fixed;
+  bottom: -8rem;
+  left: 0px;
+  right: 0px;
+  z-index: 20;
+  display: flex;
+  height: 90vh;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 1rem;
+  overflow-y: auto;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+  background-color: white;
+  padding: 1rem;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.user-menu.active {
+  visibility: visible;
+  bottom: 0px;
+  opacity: 1;
+}
