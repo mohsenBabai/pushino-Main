@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 export default function page() {
+  const [isShowSortModal, setIsShowSortModal] = useState(false);
+  const [isShowFilterModal, setIsShowFilterModal] = useState(false);
   return (
     <>
       {/* هدر سایت */}
@@ -80,7 +83,7 @@ export default function page() {
         </ol>
       </nav>
       <div className="flex flex-col lg:flex-row gap-4 mt-5 mx-4 xl:mx-10">
-        {/* side Filter box */}
+        {/* side Filter box in pc */}
         <div className="lg:sticky top-3 mt-14 h-fit lg:w-1/4 hidden lg:flex flex-col gap-y-4 items-center shadow rounded-lg py-4 dark:bg-gray-800 bg-white">
           {/* title */}
           <div className="flex items-center justify-between w-full px-2 xl:px-4">
@@ -414,6 +417,154 @@ export default function page() {
               </label>
             </div>
           </div>
+        </div>
+        {/* mobile filter */}
+        <div className="flex lg:hidden items-center gap-x-2">
+          {/* <!-- SORT BTN --> */}
+          <button
+            onClick={() => setIsShowSortModal(true)}
+            className="sort-modal-open text-sm mb-4 py-1.5 px-3 border border-[#00000017] rounded-full flex items-center gap-x-1 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-4 text-gray-400"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
+              />
+            </svg>
+
+            <p>مرتبط ترین</p>
+          </button>
+          {/* <!-- SORT MODAL --> */}
+          <div
+            className={`sort-modal${isShowSortModal == true ? " active" : ""}`}
+          >
+            <div className="flex justify-between sort-modal-close">
+              <p>مرتب سازی بر اساس </p>
+              <svg
+                onClick={() => setIsShowSortModal(false)}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-5 text-gray-800 dark:text-gray-300  cursor-pointer"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </div>
+            <ul className="flex w-full flex-col items-center justify-center divide-y divide-gray-300 dark:divide-gray-200/20 ">
+              <li className="py-3 w-full text-center cursor-pointer hover:text-blue-500 transition-colors duration-200 ease-in-out">
+                پیش فرض
+              </li>
+              <li className="py-3 w-full text-center cursor-pointer hover:text-blue-500 transition-colors duration-200 ease-in-out">
+                جدید ترین
+              </li>
+              <li className="py-3 w-full text-center cursor-pointer hover:text-blue-500 transition-colors duration-200 ease-in-out">
+                ارزان ترین
+              </li>
+              <li className="py-3 w-full text-center cursor-pointer hover:text-blue-500 transition-colors duration-200 ease-in-out">
+                گران‌ترین
+              </li>
+              <li className="py-3 w-full text-center cursor-pointer hover:text-blue-500 transition-colors duration-200 ease-in-out">
+                پرفروش ترین
+              </li>
+
+              <li className="py-3 w-full text-center cursor-pointer hover:text-blue-500 transition-colors duration-200 ease-in-out">
+                {" "}
+                پیشنهادی
+              </li>
+            </ul>
+          </div>
+          {/* <!-- FILTER BTN --> */}
+          <button
+            onClick={() => setIsShowFilterModal(true)}
+            className="filter-modal-open text-sm mb-4 py-1.5 px-3 border border-[#00000017] rounded-full flex items-center gap-x-1 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-4 text-gray-400 "
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z"
+              />
+            </svg>
+
+            <p>فیلتر</p>
+          </button>
+          {/* <!-- Filter MODAL --> */}
+          <div
+            className={`filter-modal${
+              isShowFilterModal == true ? " active" : ""
+            }`}
+          >
+            <div className="flex justify-between filter-modal-close">
+              <p>فیلتر</p>
+
+              <svg
+                onClick={() => setIsShowFilterModal(false)}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-5 text-gray-800 dark:text-gray-300 cursor-pointer"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </div>
+            {/* <!-- FILTERS --> */}
+            <div className="w-full divide-y divide-slate-200 dark:divide-gray-700/20">
+              {/* <!-- TOGGLE SWITCH --> */}
+              <div
+                className="w-full justify-between flex items-center gap-x-3 px-2 xl:px-4 py-4"
+                dir="ltr"
+              >
+                <label
+                  htmlFor="hs-valid-toggle-switch5"
+                  className="relative inline-block w-11 h-6 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    id="hs-valid-toggle-switch5"
+                    className="peer sr-only"
+                  />
+                  <span className="absolute inset-0 bg-gray-200 rounded-full transition-colors duration-200 ease-in-out peer-checked:bg-blue-500 dark:bg-neutral-700 dark:peer-checked:bg-blue-500 peer-disabled:opacity-50 peer-disabled:pointer-events-none"></span>
+                  <span className="absolute top-1/2 start-0.5 -translate-y-1/2 size-5 bg-white rounded-full shadow-xs transition-transform duration-200 ease-in-out peer-checked:translate-x-full dark:bg-neutral-400 dark:peer-checked:bg-white"></span>
+                </label>
+                <label
+                  htmlFor="hs-valid-toggle-switch5"
+                  className="text-gray-800 dark:text-gray-100"
+                >
+                  فقط کالا های موجود
+                </label>
+              </div>
+            </div>
+          </div>
+          <span className="text-sm text-gray-400 ms-auto py-1.5 px-4">
+            ۱3,۰۴۰ کالا{" "}
+          </span>
         </div>
         {/* top Filter & products  */}
         <div className="lg:w-3/4">

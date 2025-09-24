@@ -240,3 +240,60 @@ input[type="number"] {
   bottom: 0px;
   opacity: 1;
 }
+.sort-modal {
+  visibility: hidden;
+  position: fixed;
+  bottom: -8rem;
+  left: 0px;
+  right: 0px;
+  z-index: 20;
+  display: flex;
+  height: 65vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 1.25rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  padding: 1rem;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.sort-modal.active {
+  visibility: visible;
+  bottom: 0px;
+  opacity: 1;
+}
+.filter-modal {
+  visibility: hidden;
+  position: fixed;
+  bottom: -8rem;
+  left: 0px;
+  right: 0px;
+  z-index: 20;
+  display: flex;
+  height: 75vh;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 1rem;
+  overflow-y: auto;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  padding: 1rem;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.filter-modal.active {
+  visibility: visible;
+  bottom: 0px;
+  opacity: 1;
+}
