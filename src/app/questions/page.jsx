@@ -66,7 +66,7 @@ export default function page() {
           </button>
           <button className="group border-t border-x border border-[#00000040] rounded-lg focus:outline-none font-Dana">
             <div className="flex items-center cursor-pointer justify-between h-14 px-3 rounded-lg text-zinc-700 hover:bg-gray-100">
-              سفارشم را به صورت اینترنتی پرداخت کردم اما سفارشم تایید نشده !
+              سفارشم را پرداخت کردم اما سفارشم تایید نشده !
               <span className="truncate"></span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
